@@ -256,3 +256,13 @@ main p i {
     margin-right: 8px;
     text-shadow: none; /* テキストシャドウを適用しない */
 }
+img.content-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto; /* ここが重要 */
+    display: block;
+    margin-top: 20px;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
