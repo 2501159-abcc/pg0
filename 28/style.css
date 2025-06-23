@@ -1,0 +1,258 @@
+body {
+  font-family: 'Arial Rounded MT Bold', 'メイリオ', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #555;
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* 背景画像を固定 */
+}
+
+header {
+  background-color: #66CDAA; /* 明るい青緑色 */
+  padding: 15px 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15); /* シャドウを少し強めに */
+  position: sticky; /* ヘッダーをスクロール時に上部に固定 */
+  top: 0;
+  z-index: 1000; /* 他の要素より手前に表示 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px; /* パディングを少し大きく */
+  border-radius: 25px; /* 角を丸く */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* アニメーションを追加 */
+  display: block; /* リンク全体をボタンのように */
+}
+
+nav ul li a:hover {
+  background-color: #458B74; /* ホバー時の背景色を少し濃く */
+  transform: translateY(-2px); /* 少し上に浮き上がる */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* シャドウを追加 */
+}
+
+main {
+  padding: 30px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 各コンテンツ間の隙間 */
+}
+
+/* 各ページの背景設定を統一 */
+body.index {
+  background-image: url("image/index-back.png");
+  background-color: rgba(238, 242, 243, 0.7); /* 背景色に透明度を追加 */
+  background-blend-mode: overlay; /* 画像と背景色を重ねる */
+}
+
+body.food {
+  background-image: url("image/egg-back.png");
+  background-color: rgba(255, 248, 220, 0.7);
+  background-blend-mode: overlay;
+}
+
+body.sports {
+  background-image: url("image/sports-back.png");
+  background-color: rgba(224, 247, 250, 0.7);
+  background-blend-mode: overlay;
+}
+
+body.hobby {
+  background-image: url("image/hobby-back.png");
+  background-color: rgba(243, 229, 245, 0.7);
+  background-blend-mode: overlay;
+}
+
+body.artist {
+  background-image: url("image/artist-back.png");
+  background-color: rgba(255, 224, 178, 0.7);
+  background-blend-mode: overlay;
+}
+
+body.pet {
+  background-image: url("image/pet-back.png");
+  background-color: rgba(252, 228, 236, 0.7);
+  background-blend-mode: overlay;
+}
+
+img.content-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px; /* 上部の余白を調整 */
+  border-radius: 18px; /* 角をさらに丸く */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* シャドウを強めに */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ホバーアニメーション */
+}
+
+img.content-img:hover {
+  transform: translateY(-5px) scale(1.02); /* 少し浮き上がり、拡大 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* ホバー時のシャドウを強調 */
+}
+
+
+main h1, main h2 {
+  background-color: #FFA07A; /* アクセントカラーのオレンジ */
+  color: white;
+  padding: 15px 30px; /* パディングを大きく */
+  border-radius: 35px; /* 丸みを強く */
+  display: inline-block;
+  margin-bottom: 25px; /* 下部の余白を調整 */
+  font-size: 2.5em; /* フォントサイズを大きく */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* シャドウを追加 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main h1:hover, main h2:hover {
+  transform: translateY(-3px); /* 少し浮き上がる */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* シャドウを強調 */
+}
+
+main p {
+  background-color: rgba(255, 255, 255, 0.9); /* 白に近い色で透明度を調整 */
+  padding: 20px 30px; /* パディングを大きく */
+  border-radius: 20px; /* 角を丸く */
+  max-width: 800px;
+  line-height: 1.8;
+  margin-bottom: 25px; /* 下部の余白を調整 */
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* シャドウを追加 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main p:hover {
+  transform: translateY(-2px); /* 少し浮き上がる */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* シャドウを強調 */
+}
+
+.link-button {
+  display: inline-block;
+  padding: 16px 32px; /* パディングを大きく */
+  font-size: 19px; /* フォントサイズを大きく */
+  font-weight: bold;
+  background-color: #FF7F50; /* 少し明るいオレンジに調整 */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 35px; /* 丸みを強く */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  margin-top: 15px;
+  margin-right: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* シャドウを強めに */
+}
+
+.link-button:hover {
+  background-color: #FF6347; /* ホバーでさらに濃いオレンジ */
+  transform: translateY(-3px); /* 少し上に浮き上がるアニメーションを大きく */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* ホバー時にもシャドウを強く */
+}
+
+.link-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.artist-link-section {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.98); /* ほぼ不透明な白 */
+  padding: 35px; /* パディングを大きく */
+  border-radius: 20px; /* 角を丸く */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* シャドウを強めに */
+  text-align: center;
+}
+
+.artist-link-section h3 {
+  margin-top: 0;
+  margin-bottom: 30px; /* 下部の余白を大きく */
+  color: #666; /* 少し濃いめのグレー */
+  font-size: 2em; /* フォントサイズを大きく */
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* 要素間の隙間を大きく */
+  align-items: center;
+  text-align: center;
+}
+
+/* レスポンシブ対応の基本的な追加（モバイル向け） */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* ナビゲーションを縦並びに */
+    gap: 10px; /* 縦並び時の隙間 */
+  }
+
+  nav ul li a {
+    padding: 10px;
+    width: 80%; /* 幅を調整 */
+    margin: 0 auto; /* 中央揃え */
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  main h1, main h2 {
+    font-size: 1.8em;
+    padding: 10px 20px;
+  }
+
+  main p {
+    padding: 15px 20px;
+  }
+
+  .link-button {
+    font-size: 16px;
+    padding: 12px 25px;
+    margin-right: 10px;
+  }
+}
+main p {
+  background-color: rgba(255, 255, 255, 0.95); /* ほぼ不透明な白でよりクリーンに */
+  padding: 22px 35px; /* パディングを少し増やしてゆとりを持たせる */
+  border-radius: 25px; /* 角丸を少し大きくして、より柔らかく */
+  max-width: 800px;
+  line-height: 1.9; /* 行間をさらに広げて読みやすく */
+  margin-bottom: 28px; /* 下部の余白を調整 */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* シャドウを少し柔らかく */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* 控えめなテキストシャドウを追加 */
+  border: 1px solid rgba(220, 220, 220, 0.5); /* 非常に薄いボーダーを追加（オプション） */
+}
+
+main p:hover {
+  transform: translateY(-3px); /* ホバー時に少し浮き上がるアニメーションを強調 */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* ホバー時のシャドウを強調 */
+}
+/* アイコンのスタイル */
+main h1 i, main h2 i, .artist-link-section h3 i {
+    color: #FFD700; /* 見出しのアイコン色をゴールドに */
+    margin-right: 12px;
+    font-size: 0.85em; /* 親要素の見出しに合わせて調整 */
+    text-shadow: none; /* テキストシャドウを適用しない */
+}
+
+main p i {
+    color: #66CDAA; /* 段落のアイコン色を青緑に */
+    margin-right: 8px;
+    text-shadow: none; /* テキストシャドウを適用しない */
+}
